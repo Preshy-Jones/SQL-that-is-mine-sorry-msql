@@ -1,6 +1,6 @@
 const express = require('express');
 const mysql = require('mysql');
-const ejs = require('ejs');
+
 const port = process.env.PORT || 8007
 
 
@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json());
 
-app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 
 app.use('/', require('./routes/auth'))
